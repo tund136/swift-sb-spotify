@@ -13,6 +13,8 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = "Spotify"
+        view.backgroundColor = .systemGreen
     }
     
 
