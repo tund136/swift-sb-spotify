@@ -13,6 +13,27 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let vcHome = HomeViewController()
+        let vcSearch = SearchViewController()
+        let vcLibrary = LibraryViewController()
+        
+        vcHome.title = "Browse"
+        vcSearch.title = "Search"
+        vcLibrary.title = "Library"
+        
+        vcHome.navigationItem.largeTitleDisplayMode = .always
+        vcSearch.navigationItem.largeTitleDisplayMode = .always
+        vcLibrary.navigationItem.largeTitleDisplayMode = .always
+        
+        let navHome = UINavigationController(rootViewController: vcHome)
+        let navSearch = UINavigationController(rootViewController: vcSearch)
+        let navLibrary = UINavigationController(rootViewController: vcLibrary)
+        
+        navHome.navigationBar.prefersLargeTitles = true
+        navSearch.navigationBar.prefersLargeTitles = true
+        navLibrary.navigationBar.prefersLargeTitles = true
+        
+        setViewControllers([navHome, navSearch, navLibrary], animated: false)
     }
     
 
